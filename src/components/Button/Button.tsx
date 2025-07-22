@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import classNames from "classnames";
-import { ButtonProps } from "./types";
+import { ButtonProps } from "../../types";
 
 const injectStyles = () => {
   const styleId = "custom-button-styles";
