@@ -12,6 +12,6 @@
     "skipLibCheck": true,
     "typeRoots": ["node_modules/@types"]
   },
-  "include": ["src", "rollup.config.js","global.d.ts"],
+  "include": ["src", "rollup.config.mjs","global.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

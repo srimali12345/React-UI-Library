@@ -1,13 +1,12 @@
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import typescript from '@rollup/plugin-typescript';
-import postcss from 'rollup-plugin-postcss';
-import external from 'rollup-plugin-peer-deps-external';
-import dts from 'rollup-plugin-dts';
+const resolve = require('@rollup/plugin-node-resolve');
+const commonjs = require('@rollup/plugin-commonjs');
+const typescript = require('@rollup/plugin-typescript');
+const postcss = require('rollup-plugin-postcss');
+const external = require('rollup-plugin-peer-deps-external');
+const dts = require('rollup-plugin-dts').default;
+const pkg = require('./package.json');
 
-import pkg from './package.json' assert { type: 'json' };
-
-const config = [
+module.exports = [
   {
     input: 'src/index.ts',
     output: [
@@ -43,5 +42,3 @@ const config = [
     plugins: [dts()],
   },
 ];
-
-export default config;
