@@ -8,7 +8,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "prepare": "husky"
+    "prepare": "husky",
+     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\""
   },
   "repository": {
     "type": "git",
@@ -34,17 +37,21 @@
     "@types/classnames": "^2.3.0",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
-    "eslint": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.3",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
-    "prettier": "^3.2.5",
+    "prettier": "^3.6.2",
     "rollup": "^4.45.1",
     "rollup-plugin-dts": "^6.2.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "typescript": "^5.8.3"
   },
-  "lint-staged": {  
+  "lint-staged": {
     "*.{ts,tsx}": [
       "eslint --fix",
       "prettier --write",
